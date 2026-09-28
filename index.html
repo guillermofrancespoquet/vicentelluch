@@ -242,7 +242,7 @@
     <div class="pn-metric"><div class="pn-metric-lbl">% Masa grasa (Durnin & Womersley)</div><div class="pn-metric-val">11,9 %</div><div class="pn-metric-sub">8,71 kg · Σ6 pliegues: 44,0 mm</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">% Masa muscular (Lee)</div><div class="pn-metric-val">45,7 %</div><div class="pn-metric-sub">33,45 kg · Índice músculo/óseo 2,83</div></div>
   </div>
-  <div class="pn-perfil-grid" style="margin-bottom:10px;margin-top:1.75rem">
+  <div class="pn-perfil-grid" style="margin-bottom:10px;margin-top:0.75rem">
     <div class="pn-metric"><div class="pn-metric-lbl">LBM (masa libre de grasa)</div><div class="pn-metric-val">64,5 kg</div><div class="pn-metric-sub">Músculo esquelético: 41,6 kg</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">TMB (bioimpedancia)</div><div class="pn-metric-val">1762 kcal</div><div class="pn-metric-sub">Edad metabólica: 21 años</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">% Tejido adiposo</div><div class="pn-metric-val">20,5 %</div><div class="pn-metric-sub">14,99 kg (Ross y Kerr, 1993)</div></div>
@@ -310,9 +310,7 @@
 
 </div>
 
-<hr class="pn-perfil-divider">
-
-<div id="printArea" style="margin-bottom:1.5rem">
+<div id="printArea" style="margin-top:2rem;margin-bottom:1.5rem">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem;padding-bottom:0.4rem;border-bottom:1px solid #e8e8e8;">
     <div class="section-label" style="margin:0;padding:0;border:none;">Menú semanal de un vistazo</div>
     <button class="pn-print-btn" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
@@ -337,11 +335,11 @@
   <div style="font-size:11px;color:#999;margin-top:8px;">* Semana orientativa: entreno de recuperación L, X, J + viernes o sábado (alternando según la semana) + trabajo suave el domingo. Ajusta los días según tu calendario real de fisioterapia/gimnasio.</div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2rem;">
   <div class="section-label">Menú desarrollado por días</div>
   <div class="pn-days" id="dayTabs"></div>
   <div id="dayView"></div>
-  <div class="pn-legend">
+  <div class="pn-legend" style="border-top:none;margin-top:1rem;padding-top:0;">
     <span style="font-size:12px;color:#aaa;margin-right:4px;">Comidas:</span>
     <span class="pn-legend-item"><span class="pn-badge badge-d">D</span> Desayuno</span>
     <span class="pn-legend-item"><span class="pn-badge badge-a">A</span> Almuerzo</span>
@@ -351,20 +349,24 @@
   </div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2.5rem;">
   <div class="section-label">Lista de compra semanal</div>
   <div class="pn-shop-tabs" id="shopTabs"></div>
   <div id="shopView"></div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2.5rem;">
   <div class="section-label">Próxima revisión</div>
   <div style="display:flex;align-items:center;gap:14px;background:#fafafa;border:1px solid #e5e5e5;border-radius:12px;padding:1rem 1.25rem;flex-wrap:wrap;">
     <div style="font-size:28px;">📅</div>
     <div style="flex:1;min-width:200px;">
-      <div style="font-size:16px;font-weight:500;color:#111;">26/10/2026 · 18:00</div>
+      <div style="font-size:16px;font-weight:500;color:#111;">26 de octubre de 2026, 18:00</div>
       <div style="font-size:12px;color:#999;margin-top:3px;">Valoración antropométrica + bioimpedancia · Revisión de adherencia y sensaciones · Ajuste de plan si procede</div>
     </div>
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Revisi%C3%B3n+nutricional+%E2%80%94+Vicente+Lluch&dates=20261026T160000Z%2F20261026T170000Z&details=Valoraci%C3%B3n+antropom%C3%A9trica+%2B+bioimpedancia.+Revisi%C3%B3n+de+adherencia+y+sensaciones.+Ajuste+de+plan+si+procede.&location=NutriLogos" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:#0d3d4f;color:#fff;text-decoration:none;border-radius:10px;padding:9px 18px;font-size:13px;font-weight:500;letter-spacing:0.02em;white-space:nowrap;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Añadir al calendario
+    </a>
   </div>
 </div>
 
@@ -379,11 +381,11 @@ const days = [
     suppl: "Sigue con tu pauta habitual: omega 3 con la cena y creatina 5g cualquier día (entrenes o no). Magnesio y proteína en polvo quedan como opcionales, para los días que los necesites.",
     libre: false,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Tu desayuno de siempre.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nAguacate (1/2 unidad)\nPavo fiambre (2-3 lonchas, ≈50g)\nPlátano", short:"Tostada + aguacate + pavo + plátano", note:"El aguacate suma grasa vegetal de calidad.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Arroz integral (≈200g cocido)\nPechuga de pollo (150g)\nChampiñones y zanahoria salteados (≈150g)\nAOVE (1 cda)", short:"Arroz + pollo + champiñones y zanahoria", note:"Cambiamos arroz blanco por integral para sumar fibra, sin que cambie el sabor que te gusta.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nPlátano\nNueces (puñado, ≈25g)", short:"Tortitas + plátano + nueces", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
-      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Patata (≈300g, de bote o al momento en air fryer)\nSalmón (150g)\nJudía verde hervida (150g)\nAOVE (1 cda)", short:"Patata + salmón + judía verde", note:"Pescado azul para variar la proteína animal de la semana.", libre:false }
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Tu desayuno de siempre.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nHummus (3 cdas)\nPlátano\nNaranja", short:"Tostada + hummus + plátano + naranja", note:"Hummus como aporte extra de legumbre, con fruta para llegar con energía a la comida.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Arroz integral (≈450g cocido)\nPechuga de pollo (70g)\nChampiñones y zanahoria salteados (≈150g)\nAOVE (1 cda)", short:"Arroz + pollo + champiñones y zanahoria", note:"Arroz integral en vez de blanco para sumar fibra, sin que cambie el sabor que te gusta.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (4 uds)\nPlátano\nNueces (puñado, ≈15g)", short:"Tortitas + plátano + nueces", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
+      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Patata (≈380g, de bote o al momento en air fryer)\nSalmón (80g)\nJudía verde hervida (150g)\nAOVE (1/2 cda)", short:"Patata + salmón + judía verde", note:"Pescado azul para variar la proteína animal de la semana.", libre:false }
     ]
   },
   {
@@ -395,11 +397,11 @@ const days = [
     suppl: null,
     libre: false,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Tu desayuno de siempre.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nHummus (3 cdas)\nZanahoria en bastones\nNaranja", short:"Tostada + hummus + zanahoria + naranja", note:"Hummus como alternativa vegetal al fiambre — el garbanzo de base suma proteína y fibra.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Macarrones integrales (90g en crudo)\nPuré de calabaza (≈150g, mezclado con la pasta)\nCarne de ternera picada (120g)\nAOVE (1 cda)", short:"Macarrones + puré de calabaza + carne", note:"El puré de calabaza mezclado con la pasta es una forma fácil de sumar verdura sin que se note mucho — de las que mejor toleras.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nManzana\nAlmendras (puñado, ≈25g)", short:"Tortitas + manzana + almendras", note:"Opcional: batido de proteína si algún día tienes prisa.", libre:false },
-      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Pechuga de pollo (120g)\nPuré de verduras licuado (≈250ml, calabacín-puerro-zanahoria)\nPan integral (1-2 rebanadas)", short:"Pollo + puré de verduras licuado + pan", note:"El puré licuado es de los que mejor te sientan — cena ligera de día de descanso.", libre:false }
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Tu desayuno de siempre.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nHummus (3 cdas)\nNaranja\nPlátano", short:"Tostada + hummus + naranja + plátano", note:"Hummus como alternativa vegetal al fiambre — el garbanzo de base suma legumbre y fibra.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Pasta integral (150g en crudo, la que más te apetezca)\nGarbanzos cocidos (≈150g escurridos)\nPuré de calabaza (≈150g, mezclado con la pasta)\nAOVE (1 cda)", short:"Pasta integral + garbanzos + puré de calabaza", note:"El puré de calabaza mezclado con la pasta es una forma fácil de sumar verdura sin que se note mucho — de las que mejor toleras. Los garbanzos aportan la proteína del plato.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Yogur griego ligero (125g)\nAvena integral (40g)\nManzana\nAlmendras (puñado, ≈15g)", short:"Yogur + avena + manzana + almendras", note:"Merienda de día de descanso.", libre:false },
+      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Pechuga de pollo (80g)\nPuré de verduras licuado (≈250ml, calabacín-puerro-zanahoria)\nPan integral (2 rebanadas)\nPatata (≈300g)\nAOVE (1/2 cda)", short:"Pollo + puré de verduras licuado + pan + patata", note:"El puré licuado es de los que mejor te sientan — cena ligera de día de descanso, con pan y patata para el aporte de carbohidrato.", libre:false }
     ]
   },
   {
@@ -411,11 +413,11 @@ const days = [
     suppl: null,
     libre: false,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Tu desayuno de siempre.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nPavo fiambre (2-3 lonchas, ≈50g)\nPlátano", short:"Tostada + pavo + plátano", note:"Tu almuerzo de siempre, con pan integral.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Arroz integral (1 vasito precocinado ≈125g)\nPechuga de pollo (150g)\nJudía verde hervida (150g)\nAOVE (1 cda)", short:"Arroz + pollo + judía verde", note:"Misma base de siempre, sumando judía verde como verdura que toleras bien.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nFruta de temporada\nPan integral con miel (1-2 rebanadas)", short:"Tortitas + fruta + pan con miel", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
-      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Patata (≈300g)\nCarne de ternera (150g)\nChampiñones salteados (≈150g)", short:"Patata + carne + champiñones", note:"Cena de recuperación, con champiñones como aporte de fibra fácil de aceptar.", libre:false }
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Tu desayuno de siempre.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nHummus (3 cdas)\nPlátano\nUva", short:"Tostada + hummus + plátano + uva", note:"Hummus como aporte extra de legumbre.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Arroz integral (≈450g cocido)\nPechuga de pollo (80g)\nJudía verde hervida (150g)\nAOVE (1 cda)", short:"Arroz + pollo + judía verde", note:"Misma base de siempre, con arroz integral para sumar fibra.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (4 uds)\nPlátano\nNueces (puñado, ≈15g)", short:"Tortitas + plátano + nueces", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
+      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Patata (≈380g)\nAlubias blancas cocidas (≈150g escurridas)\nChampiñones salteados (≈150g)\nAOVE (1/2 cda)", short:"Patata + alubias + champiñones", note:"Cena de recuperación con las alubias estofadas junto a los champiñones — un guiso sencillo con la patata como acompañamiento.", libre:false }
     ]
   },
   {
@@ -427,11 +429,11 @@ const days = [
     suppl: null,
     libre: false,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Tu desayuno de siempre.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nHummus (3 cdas)\nJamón cocido (2-3 lonchas)\nFruta de temporada", short:"Tostada + hummus + jamón + fruta", note:"Sumamos hummus para meter legumbre también fuera de la comida principal.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Garbanzos cocidos (≈150g escurridos)\nArroz integral (≈100g en crudo)\nChampiñones y zanahoria salteados (≈150g)\nPollo desmenuzado (100g)", short:"Garbanzos + arroz + champiñones y zanahoria + pollo", note:"Primera ración de legumbre de la semana, integrada con arroz y verduras que ya toleras — vamos probando cómo te sienta.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nPlátano\nFrutos secos (puñado, ≈25g)", short:"Tortitas + plátano + frutos secos", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
-      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Merluza (150g)\nPatata (≈300g)\nPuré de calabaza (≈150g)", short:"Merluza + patata + puré de calabaza", note:"Pescado blanco fácil de digerir para cerrar el día.", libre:false }
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Tu desayuno de siempre.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nJamón cocido (2 lonchas, ≈40g)\nPlátano\nNaranja", short:"Tostada + jamón + plátano + naranja", note:"Tu almuerzo de siempre, con fruta para llegar con energía a la comida.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Garbanzos cocidos (≈130g escurridos)\nArroz integral (≈300g cocido)\nChampiñones y zanahoria salteados (≈150g)\nAOVE (1 cda)", short:"Garbanzos + arroz + champiñones y zanahoria", note:"Legumbre integrada con arroz y verduras que ya toleras — vamos probando cómo te sienta.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (4 uds)\nUva\nFrutos secos (puñado, ≈15g)", short:"Tortitas + uva + frutos secos", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
+      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Merluza (150g)\nPatata (≈400g)\nPuré de calabaza (≈150g)\nAOVE (1 cda)", short:"Merluza + patata + puré de calabaza", note:"Pescado blanco fácil de digerir para cerrar el día.", libre:false }
     ]
   },
   {
@@ -443,11 +445,11 @@ const days = [
     suppl: null,
     libre: false,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Igual que los días de entreno.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nPavo fiambre (2-3 lonchas, ≈50g)\nPlátano", short:"Tostada + pavo + plátano", note:"Tu almuerzo de siempre.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Macarrones integrales (90g en crudo)\nPechuga de pollo (150g)\nChampiñones salteados (≈150g)\nAOVE (1 cda)", short:"Macarrones + pollo + champiñones", note:"Macarrones integrales — el plato que más te gusta, con un poco más de fibra.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nFruta de temporada\nPan integral con miel (1-2 rebanadas)", short:"Tortitas + fruta + pan con miel", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
-      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Salmón (150g)\nArroz integral (≈100g en crudo)\nJudía verde hervida (150g)", short:"Salmón + arroz + judía verde", note:"Cena de recuperación con pescado azul.", libre:false }
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Igual que los días de entreno.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nHummus (3 cdas)\nUva\nPlátano", short:"Tostada + hummus + uva + plátano", note:"Hummus como aporte extra de legumbre.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Pasta integral (120g en crudo, la que más te apetezca)\nPechuga de pollo (70g)\nChampiñones salteados (≈150g)\nAOVE (1 cda)", short:"Pasta integral + pollo + champiñones", note:"Pasta integral — el plato que más te gusta, con más fibra que la pasta blanca.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (4 uds)\nPlátano\nFrutos secos (puñado, ≈15g)", short:"Tortitas + plátano + frutos secos", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
+      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Salmón (80g)\nArroz integral (≈450g cocido)\nJudía verde hervida (150g)\nAOVE (1/2 cda)", short:"Salmón + arroz + judía verde", note:"Cena de recuperación con pescado azul y arroz integral.", libre:false }
     ]
   },
   {
@@ -459,10 +461,10 @@ const days = [
     suppl: null,
     libre: true,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Desayuno tranquilo de fin de semana.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nHummus (3 cdas)\nFruta de temporada", short:"Tostada + hummus + fruta", note:"Almuerzo ligero de día de descanso, con hummus como fuente de legumbre.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Patata (≈300g)\nPescado blanco (lubina o dorada, 150g)\nChampiñones y zanahoria salteados (≈150g)\nAOVE (1 cda)", short:"Patata + pescado blanco + champiñones y zanahoria", note:"Comida ligera de cara a la cena libre de esta noche.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nFruta de temporada\nFrutos secos (puñado, ≈25g)", short:"Tortitas + fruta + frutos secos", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Desayuno tranquilo de fin de semana.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nHummus (3 cdas)\nNaranja\nPlátano", short:"Tostada + hummus + naranja + plátano", note:"Almuerzo de día de descanso, con hummus como fuente de legumbre.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Patata (≈400g)\nPescado blanco (lubina o dorada, 130g)\nChampiñones y zanahoria salteados (≈150g)\nAOVE (1 cda)", short:"Patata + pescado blanco + champiñones y zanahoria", note:"Comida de cara a la cena libre de esta noche.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Yogur griego ligero (125g)\nAvena integral (40g)\nManzana\nFrutos secos (puñado, ≈15g)", short:"Yogur + avena + manzana + frutos secos", note:"Merienda de día de descanso.", libre:false },
       { type:"Ce", time:"21:30", name:"Cena libre (adherencia)", tags:[], desc:"Carbohidrato como base (arroz, patata, pan o pasta)\nProteína (carne, pescado o pollo)\nLo que te apetezca de verdura que toleres, o ninguna", short:"Cena libre — carbohidrato + proteína", note:"Es tu cena libre de la semana: elige lo que te apetezca dentro de lo que sueles comer, sin restricción.", libre:true }
     ]
   },
@@ -475,43 +477,47 @@ const days = [
     suppl: null,
     libre: false,
     meals: [
-      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con leche", short:"Café con leche", note:"Cerramos la semana igual que la empezamos.", libre:false },
-      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (2-3 rebanadas)\nPavo fiambre (2-3 lonchas, ≈50g)\nPlátano", short:"Tostada + pavo + plátano", note:"Tu almuerzo de siempre.", libre:false },
-      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Lentejas cocidas (≈150g escurridas)\nArroz integral (≈100g en crudo)\nZanahoria y champiñones salteados (≈150g)\nAOVE (1 cda)", short:"Lentejas + arroz + zanahoria y champiñones", note:"Segunda ración de legumbre de la semana, en la misma línea que el jueves.", libre:false },
-      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (6-8 uds)\nPlátano\nPan integral con miel (1-2 rebanadas)", short:"Tortitas + plátano + pan con miel", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
-      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Patata (≈300g)\nPechuga de pollo (150g)\nPuré de verduras licuado (≈200ml)", short:"Patata + pollo + puré de verduras licuado", note:"Cena sencilla para cerrar la semana y empezar bien el lunes.", libre:false }
+      { type:"D", time:"7:00", name:"Desayuno", tags:[], desc:"Café con bebida vegetal", short:"Café con bebida vegetal", note:"Cerramos la semana igual que la empezamos.", libre:false },
+      { type:"A", time:"10:30", name:"Almuerzo", tags:[], desc:"Tostada de pan integral (3 rebanadas)\nPavo fiambre (2 lonchas, ≈40g)\nPlátano\nNaranja", short:"Tostada + pavo + plátano + naranja", note:"Tu almuerzo de siempre, con fruta.", libre:false },
+      { type:"C", time:"14:00", name:"Comida", tags:[], desc:"Lentejas cocidas (≈150g escurridas)\nArroz integral (≈400g cocido)\nZanahoria y champiñones salteados (≈150g)\nAOVE (1 cda)", short:"Lentejas + arroz + zanahoria y champiñones", note:"Segunda ración de legumbre de la semana, en la misma línea que el jueves.", libre:false },
+      { type:"Me", time:"17:00", name:"Merienda", tags:[], desc:"Tortitas de maíz o arroz (4 uds)\nPlátano\nFrutos secos (puñado, ≈15g)", short:"Tortitas + plátano + frutos secos", note:"Opcional: puedes sustituir por un batido de proteína si algún día tienes prisa.", libre:false },
+      { type:"Ce", time:"21:30", name:"Cena", tags:[], desc:"Patata (≈400g)\nPechuga de pollo (80g)\nPuré de verduras licuado (≈200ml)\nAOVE (1 cda)", short:"Patata + pollo + puré de verduras licuado", note:"Cena sencilla para cerrar la semana y empezar bien el lunes.", libre:false }
     ]
   }
 ];
 
 const shopCategories = [
   { label: "🍗 Proteínas", cls: "cat-prot", items: [
-      { name: "Pechuga de pollo", qty: "≈900g (150g x 6)" },
-      { name: "Carne de ternera (picada o filete)", qty: "≈280g" },
-      { name: "Pavo fiambre (para almuerzo)", qty: "1 paquete" },
-      { name: "Jamón cocido (para almuerzo)", qty: "1 paquete" },
-      { name: "Salmón", qty: "300g (150g x 2)" },
+      { name: "Pechuga de pollo", qty: "≈380g" },
+      { name: "Pavo fiambre (para almuerzo)", qty: "1 paquete pequeño" },
+      { name: "Jamón cocido (para almuerzo)", qty: "1 paquete pequeño" },
+      { name: "Salmón", qty: "≈160g" },
       { name: "Merluza", qty: "150g" },
-      { name: "Pescado blanco (lubina/dorada)", qty: "150g" },
-      { name: "Garbanzos (bote 400g)", qty: "1 bote (≈150g escurridos)" },
+      { name: "Pescado blanco (lubina/dorada)", qty: "130g" },
+      { name: "Garbanzos (bote 400g)", qty: "2 botes (≈280g escurridos)" },
       { name: "Lentejas cocidas (bote o pouch)", qty: "1 bote (≈150g escurridas)" },
-      { name: "Hummus", qty: "1-2 tarrinas" },
+      { name: "Alubias blancas cocidas (bote)", qty: "1 bote (≈150g escurridas)" },
+      { name: "Hummus", qty: "2-3 tarrinas (almuerzo, 5 días)" },
+      { name: "Yogur griego ligero", qty: "2 unidades (125g)" },
+      { name: "Bebida vegetal de soja (o similar)", qty: "1 l" },
       { name: "Batido de proteína (opcional, para días con prisa)", qty: "según necesidad" }
   ]},
   { label: "🌾 Carbohidratos", cls: "cat-carb", items: [
-      { name: "Tortitas de maíz o arroz", qty: "1-2 paquetes" },
-      { name: "Pan integral (para tostadas)", qty: "1-2 barras" },
-      { name: "Vasitos de arroz integral precocinado", qty: "4 uds" },
-      { name: "Macarrones/espaguetis integrales", qty: "1 paquete (80-90g x 2)" },
-      { name: "Patata (de bote en conserva o para air fryer)", qty: "1,8 kg (300g x 6)" },
+      { name: "Tortitas de maíz o arroz", qty: "1 paquete (4 uds x 5 días)" },
+      { name: "Avena integral (para merienda de días de descanso)", qty: "1 paquete pequeño (40g x 2)" },
+      { name: "Pan integral (para tostadas)", qty: "2-3 barras" },
+      { name: "Arroz integral (crudo o vasitos precocinados)", qty: "≈900g crudo / 8-9 vasitos" },
+      { name: "Pasta integral (la que más le guste)", qty: "1 paquete (150g + 150g)" },
+      { name: "Patata (de bote en conserva o para air fryer)", qty: "≈2,3 kg" },
       { name: "Plátanos", qty: "6-7 uds" },
-      { name: "Manzanas, peras o naranjas", qty: "6-7 uds variadas" },
+      { name: "Naranjas", qty: "4-5 uds" },
+      { name: "Uva", qty: "≈500g" },
+      { name: "Manzanas", qty: "2 uds" },
       { name: "Miel", qty: "1 tarro" }
   ]},
   { label: "🥑 Grasas", cls: "cat-fat", items: [
       { name: "AOVE (uso moderado)", qty: "1 botella" },
-      { name: "Aguacate", qty: "2 uds" },
-      { name: "Nueces / almendras", qty: "1 bolsa (≈175g)" }
+      { name: "Nueces / almendras", qty: "1 bolsa (≈120g)" }
   ]},
   { label: "🧄 Extras", cls: "cat-extra", items: [
       { name: "Champiñones y setas (frescos o congelados)", qty: "≈500g" },
